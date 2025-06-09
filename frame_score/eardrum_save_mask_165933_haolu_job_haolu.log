@@ -1,2 +1,0 @@
-/isilon/datalake/cialab/scratch/cialab/Hao/miniconda3/envs/ear_video/bin/python: can't open file 'eardrum_save_mask.py.py': [Errno 2] No such file or directory
-srun: error: cia017: task 0: Exited with exit code 2
