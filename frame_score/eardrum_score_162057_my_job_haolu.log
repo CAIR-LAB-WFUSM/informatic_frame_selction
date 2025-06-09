@@ -1,0 +1,12 @@
+model pretrained initialized
+Traceback (most recent call last):
+  File "eardrum_score.py", line 61, in <module>
+    process_all_videos(root_folder)
+  File "eardrum_score.py", line 52, in process_all_videos
+    scores = compute_scores(video_folder)
+  File "eardrum_score.py", line 29, in compute_scores
+    for img_name in sorted(os.listdir(image_folder), key=lambda x: int(x.split('.')[0])):
+  File "eardrum_score.py", line 29, in <lambda>
+    for img_name in sorted(os.listdir(image_folder), key=lambda x: int(x.split('.')[0])):
+ValueError: invalid literal for int() with base 10: 'areas'
+srun: error: cia015: task 0: Exited with exit code 1

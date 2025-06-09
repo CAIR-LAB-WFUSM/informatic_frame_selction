@@ -1,0 +1,3 @@
+Processed /isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames/Uncategorized/CE124R.MOV
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 201249 ON cia011 CANCELLED AT 2025-03-12T09:48:20 ***
