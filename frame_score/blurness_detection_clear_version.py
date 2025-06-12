@@ -236,8 +236,8 @@ def compute_blur_score(patch_gray, mask,circle, tau=25.0):
 
 
 # Main function to iterate over subdirectories and process images in parallel
-def main(selected_png_dir=None):
-    root_folder = "/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames"
+def main(root_folder, selected_png_dir=None):
+    # root_folder = "/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames"
 
     selected_mov_folders = set()
     
@@ -374,6 +374,7 @@ if __name__ == "__main__":
     # video_path = "/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames/Normal/OT131608.MOV"
     # single_video_main(video_path)
 
+    root_folder = "/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames"
     selected_dir = "/isilon/datalake/gurcan_rsch/scratch/otoscope/Hao/compare_frame_selection/data/human_selected_new_all"
-    main(selected_png_dir=selected_dir)
+    main(root_folder, selected_png_dir=selected_dir)
     # main()

@@ -2,9 +2,8 @@
 import os
 import numpy as np
 import pandas as pd
-def main():
-    root_folder = '/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames'
-
+def main(root_folder):
+    
     # Iterate through all subfolders in the base folder
     for subdir, _, _ in os.walk(root_folder):
         if not subdir.endswith(".MOV"):
@@ -46,7 +45,8 @@ def main():
         print(f"Saved area data to: {csv_path}")
 
     print("Processing complete.")
-    
+
 if __name__ == '__main__':
-    main()
+    root_folder = '/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames'
+    main(root_folder)
 # %%

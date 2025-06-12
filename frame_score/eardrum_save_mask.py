@@ -305,7 +305,7 @@ def _work(process_id, model,  dataset_positive, dataset_negative, video_folder, 
             
 
 #%%
-def main():
+def main(root_folder):
     model_path = './model_weights/best_resnet50_eardrum.pth'
     
 
@@ -318,7 +318,7 @@ def main():
     n_gpus = torch.cuda.device_count()
     print(n_gpus)
 
-    root_folder = '/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames'
+    
     for root, dirs, files in os.walk(root_folder):
         for dir_name in dirs:
             if dir_name.endswith('.MOV'):
@@ -348,6 +348,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    root_folder = '/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames'
+    main(root_folder)
                 
 # %%

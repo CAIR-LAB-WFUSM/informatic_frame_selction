@@ -60,7 +60,7 @@ def process_all_videos(root_folder, model, transform, device):
                 df.to_csv(output_file, index=False)
                 print(f'finished {dir_name}')
 
-def main():
+def main(root_folder):
     # Define the transform for preprocessing the images
     transform = transforms.Compose([
         transforms.Resize((224, 224)),  # Resize images to 224x224
@@ -78,11 +78,12 @@ def main():
     resnet50.to(device)  # Set the model to evaluation mode
     # Define the function to compute eardrum scores
     # Specify the root folder containing all video frames
-    root_folder = '/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames'
+    
     process_all_videos(root_folder, resnet50, transform, device)
 
     print("Eardrum scores computed and saved for all videos.")
 
 # %%
 if __name__ == '__main__':
-    main()
+    root_folder = '/isilon/datalake/cialab/scratch/cialab/Hao/work_record/Project4_ear/project_inherit/Data/2019_2021/All_video_frames'
+    main(root_folder)
