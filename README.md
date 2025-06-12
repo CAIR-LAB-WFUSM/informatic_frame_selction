@@ -12,6 +12,7 @@ This project aims to automatically select the most **informative frame** from an
 
 The input videos should be preprocessed into folders containing extracted frames in the following structure:
 
+```plaintext
 root_folder/ 
 ├── Effusion/ 
 │ ├── ABC123.MOV/ 
@@ -21,7 +22,7 @@ root_folder/
 │ └── ... 
 ├── Normal/ 
 └── ...
-
+```
 
 Each `.MOV` folder should contain PNG images representing frames extracted from the original video.
 
@@ -31,8 +32,10 @@ Each `.MOV` folder should contain PNG images representing frames extracted from 
 2. Modify the `root_folder` variable in [`./frame_score/main.py`](./frame_score/main.py) to point to your dataset directory.
 3. Run the main script:
 
+```bash
 python ./frame_score/main.py
 After execution, each *.MOV/ folder will contain a file named ranked_scores.csv.
+```
 
 ## Output: ranked_scores.csv
 Each CSV contains the ranking information of frames with the following columns:
