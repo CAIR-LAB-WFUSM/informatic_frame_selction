@@ -12,14 +12,14 @@ This project aims to automatically select the most **informative frame** from an
 
 The input videos should be preprocessed into folders containing extracted frames in the following structure:
 
-root_folder/
-├── Effusion/
-│ ├── ABC123.MOV/
-│ │ ├── 1.png
-│ │ ├── 2.png
-│ │ └── ...
-│ └── ...
-├── Normal/
+root_folder/ 
+├── Effusion/ 
+│ ├── ABC123.MOV/ 
+│ │ ├── 1.png 
+│ │ ├── 2.png 
+│ │ └── ... 
+│ └── ... 
+├── Normal/ 
 └── ...
 
 
