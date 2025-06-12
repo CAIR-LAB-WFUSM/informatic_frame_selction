@@ -305,10 +305,7 @@ def _work(process_id, model,  dataset_positive, dataset_negative, video_folder, 
             
 
 #%%
-
-
-
-if __name__ == '__main__':
+def main():
     model_path = './model_weights/best_resnet50_eardrum.pth'
     
 
@@ -348,5 +345,9 @@ if __name__ == '__main__':
                     args=(model, split_positive, split_negative, video_folder, args),
                     join=True
                 )
+
+
+if __name__ == '__main__':
+    main()
                 
 # %%
