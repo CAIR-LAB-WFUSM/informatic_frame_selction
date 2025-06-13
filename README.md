@@ -26,7 +26,7 @@ root_folder/
 
 Each `.MOV` folder should contain PNG images representing frames extracted from the original video.
 
-## Usage
+## Usage (Batch Processing)
 
 1. Clone the repository and prepare your dataset as described above.
 2. Modify the `root_folder` variable in [`./frame_score/main.py`](./frame_score/main.py) to point to your dataset directory.
@@ -45,3 +45,24 @@ img	score	blurriness	Area	score_rank	blurriness_rank	Area_rank	weighted_rank
 51.png	1.000000010	2404.21	12941	8	11	98	27.2
 
 Higher weighted_rank indicates a more informative frame.
+
+## Usage (Signle Video Processing)
+You can also process a single .avi, .mov, or .mp4 video file without preparing extracted frames manually. Use the single_video_frame_evaluate.py script for this purpose.
+
+### Example
+```bash
+python single_video_frame_evaluate.py
+```
+
+Make sure to modify the video_file and output_csv variables inside single_video_frame_evaluate.py:
+```python
+video_file = "/path/to/your/video/ABC123.MOV"
+output_csv = "./results/ABC123_score.csv"
+debug_mode = True  # Set to False to auto-delete temp folder
+```
+-This script will automatically extract frames, process them, and generate a CSV file with ranked scores.
+
+-If debug_mode = True, intermediate files will be kept in a temp folder under the working directory for inspection.
+
+## License
+This project is licensed under the MIT License.
