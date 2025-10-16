@@ -1,4 +1,4 @@
-# Otoscope Informative Frame Selector
+# LUCID: Intelligent Informative Frame Selection in Otoscopy for Enhanced Diagnostic Utilitys
 
 This project aims to automatically select the most **informative frame** from an otoscope video. Informative frames are essential for downstream tasks such as diagnosis and training machine learning models. This script ranks video frames based on a combination of three criteria.
 
